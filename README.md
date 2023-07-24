@@ -68,3 +68,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Custom configuration
+Install Editor Config for VS Code from Extensions manager. Reload VS Code editor and right click on an empty space inside the project explorer.
+Choose Generate .editorconfig to create this file. Reload Visual Studio Code to activate this plugin.
+
+## Eslint
+Run `npx eslint --init` to boilerplate Eslint's configuration.
+To avoid incompatibility with the Eslint installed by React, erase Eslint package from the devDependencies in package.json, delete package-lock.json and node_modules folder and then run `npm i` to install them again.
+Copy `.eslintrc.js` file from this repository and replace your own project's file with the same name.
+
+## Prettier
+Run `npm i -D prettier eslint-config-prettier eslint-plugin-prettier` to install Prettier and all it's Eslint dependencies.
+Add to TextEditor's config on VS Code's settings:
+"editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll": true
+}
+
+Copy `prettierrc.js` file from this repository into your project.
+
+## Finally
+Reload you Visual Studio Code to apply all the changes.
